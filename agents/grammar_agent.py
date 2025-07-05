@@ -19,9 +19,7 @@ grammar_agent = Agent(
 
 def correct_text(text: str):
     prompt = (
-        "You are a grammar expert. Proofread the following text. Fix grammar, spelling, and improve clarity.\n\n"
-        f"{text}\n\n"
-        "Return only the corrected version."
+        f"Please correct the grammar, spelling, and clarity of the following text: {text} Only return the corrected version."
     )
     response = grammar_agent.run(prompt)
     return response.content  

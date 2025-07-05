@@ -19,6 +19,6 @@ summarizer_agent = Agent(
 
 
 def summarize_text(text):
-    prompt = f"Summarize the following text in 5-6 sentences:\n\n{text}"
+    prompt = f"Summarize the following text in 5-6 sentences:{text}"
     response = summarizer_agent.run(prompt)
     return response.content  
