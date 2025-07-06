@@ -5,16 +5,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-model = MistralChat(
-    id="mistral-small",
-    api_key=os.getenv("MISTRAL_API_KEY"),
-    temperature=0.3
-)
+model = MistralChat(id="mistral-small",api_key=os.getenv("MISTRAL_API_KEY"),temperature=0.3)
 
-summarizer_agent = Agent(
-    model=model,
-    description="Summarize long text into a concise 5-sentence summary."
-)
+summarizer_agent = Agent(model=model,
+    description="Summarize long text into a concise 5-sentence summary.")
 
 
 
