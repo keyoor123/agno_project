@@ -12,7 +12,9 @@ grammar_agent = Agent(model=model,
 
 
 def correct_text(text):
-    prompt = (f"Please correct the grammar, spelling, and clarity of the following text: {text} Only return the corrected version.")
-    
+    prompt = (
+    f"Please proofread the following text for grammar, spelling, and clarity. "
+    f"Ensure the language sounds natural and professional. "
+    f"Return only the corrected version: {text}")
     response = grammar_agent.run(prompt)
     return response.content  

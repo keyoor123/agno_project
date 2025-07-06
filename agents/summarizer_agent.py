@@ -13,6 +13,8 @@ summarizer_agent = Agent(model=model,
 
 
 def summarize_text(text):
-    prompt = f"Summarize the following text in 5-6 sentences:{text}"
+    prompt = (
+    f"Please summarize the following text in 5–6 well-structured sentences. "
+    f"Focus on the key ideas while maintaining clarity and original meaning:{text}")
     response = summarizer_agent.run(prompt)
     return response.content  
